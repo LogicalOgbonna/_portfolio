@@ -3,7 +3,7 @@ import { Projects } from "../projects/index.tsx";
 import ExperienceList from "../experience";
 import { useTheme } from "../../theme.tsx";
 
-export type tabs = "experience" | "projects" | "education" | "articles";
+export type tabs = "experience" | "projects" | "articles";
 
 const Tabs = ({ tab }: { tab: tabs }) => {
   const [activeTab, setActiveTab] = useState<{ label: tabs; active: boolean }>({
@@ -14,13 +14,11 @@ const Tabs = ({ tab }: { tab: tabs }) => {
   const tabContent: Record<tabs, React.ReactNode> = {
     experience: <ExperienceList />,
     projects: <Projects />,
-    education: "",
     articles: "",
   };
   const planOptions: { label: tabs; active: boolean }[] = [
     { label: "experience", active: true },
     { label: "projects", active: false },
-    { label: "education", active: false },
     { label: "articles", active: false },
   ];
 
