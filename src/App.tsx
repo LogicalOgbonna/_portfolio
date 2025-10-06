@@ -2,7 +2,7 @@ import React from "react";
 import { useMemo } from "react";
 import { useTheme } from "./theme.tsx";
 import Tabs, { type tabs } from "./components/tabs/index.tsx";
-import { FaGithub, FaLinkedin, FaTwitter } from "react-icons/fa";
+import { FaDownload, FaGithub, FaLinkedin, FaTwitter } from "react-icons/fa";
 
 const socialLinks = [
   { name: "GitHub", href: "https://github.com/logicalOgbonna", icon: "github" },
@@ -135,21 +135,15 @@ const App = () => {
 
         <section className="mt-14 flex flex-col items-center gap-6 md:flex-row mx-auto justify-center">
           <a
-            href="#"
+            href="/cv/Software Engineer Resume.pdf"
+            download
             className="inline-flex items-center justify-center rounded-xl bg-gradient-to-tr from-primary to-[#ffc940] px-10 py-4 text-sm font-semibold uppercase tracking-wide text-[#3d3d3d] shadow-[0_18px_40px_rgba(255,224,113,0.25)] transition duration-300 hover:-translate-y-1 hover:shadow-[0_24px_45px_rgba(255,224,113,0.35)]"
           >
-            <svg
-              aria-hidden="true"
-              viewBox="0 0 20 20"
-              className="mr-2 h-5 w-5 fill-current"
-            >
-              <path d="M10 2a1 1 0 0 1 .894.553l.04.091 1.999 4.5a1 1 0 0 1-1.708.99l-.053-.09-.438-.99V12h2a1 1 0 0 1 .117 1.993L12 14H8a1 1 0 0 1-.117-1.993L8 12h2V7.054l-.438.99a1 1 0 0 1-1.848-.806l.04-.091 2-4.5A1 1 0 0 1 10 2Z" />
-              <path d="M16 16a1 1 0 0 1 .117 1.993L16 18H4a1 1 0 0 1-.117-1.993L4 16h12Z" />
-            </svg>
+            <FaDownload className="mr-2 h-5 w-5 fill-current" />
             Download CV
           </a>
           <a
-            href="#"
+            href="mailto:arinzeogbo@gmail.com"
             className={`inline-flex items-center justify-center rounded-xl px-10 py-4 text-sm font-semibold uppercase tracking-wide transition duration-300 hover:-translate-y-1 ${themeColors.secondaryBtn}`}
           >
             Contact me
